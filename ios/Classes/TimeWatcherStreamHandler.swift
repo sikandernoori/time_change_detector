@@ -7,6 +7,7 @@ class TimeWatcherStreamHandler: NSObject, FlutterStreamHandler{
     func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
         _sink = events
         NotificationCenter.default.addObserver(self, selector: #selector(timeChangedNotification), name: NSNotification.Name.NSSystemClockDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(timeChangedNotification), name: NSNotification.Name.NSSystemTimeZoneDidChange, object: nil)
         return nil
     }
 
