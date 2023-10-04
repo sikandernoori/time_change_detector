@@ -16,7 +16,7 @@ Your AndroidManifest.xml file should look like this:
   <application
 	           ...
                 <receiver
-                  android:name=".TimeChangeDetectorPlugin"
+                  android:name="com.randomforest.time_change_detector.TimeChangeDetectorPlugin"
                   android:exported="true">
                   <intent-filter>
                       <action android:name="android.intent.action.TIME_SET" />
