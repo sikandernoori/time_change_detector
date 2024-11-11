@@ -2,19 +2,22 @@ name: "Publish package to pub.dev"
 on:
   release:
     types: [published]
+
 jobs:
   publish:
-    name: publish
+    name: Publish
     runs-on: ubuntu-latest
     env:
-      flutter_version: 3.24.3
+      flutter_version: '3.24.3'
     permissions:
       id-token: write
-    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
-    with:
-      environment: pub.dev
+
     steps:
       - uses: actions/checkout@v3
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: 'stable'
       - name: Set up Java 17
         uses: actions/setup-java@v3
         with:
