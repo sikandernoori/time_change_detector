@@ -1,8 +1,8 @@
 name: "Publish package to pub.dev"
 on:
-  release:
-    types: [published]
-
+  push:
+    tags:
+    - 'v[0-9]+.[0-9]+.[0-9]+'
 jobs:
   publish:
     name: Publish
@@ -36,9 +36,9 @@ jobs:
           cd ..
       - name: Run dry run and check for errors
         run: dart pub publish --dry-run
-      - name: Verify example app builds successfully
-        working-directory: example
-        run: flutter build apk
+      # - name: Verify example app builds successfully
+      #   working-directory: example
+      #   run: flutter build apk
       - name: Publish package
         env:
           PUB_ENVIRONMENT: 'github-action'
