@@ -40,4 +40,6 @@ jobs:
         working-directory: example
         run: flutter build apk
       - name: Publish package
+        env:
+          PUB_ENVIRONMENT: 'github-action'
         run: dart pub publish --force
