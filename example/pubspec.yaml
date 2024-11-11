@@ -1,8 +1,9 @@
 name: time_change_detector_example
-description: Demonstrates how to use the time_change_detector plugin.
+description: "Demonstrates how to use the time_change_detector plugin."
+publish_to: 'none'
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ^3.5.3
 
 dependencies:
   flutter:
@@ -11,14 +12,14 @@ dependencies:
   time_change_detector:
     path: ../
 
-  cupertino_icons: ^1.0.2
-  awesome_notifications: ^0.6.19
+  cupertino_icons: ^1.0.8
+  awesome_notifications: ^0.10.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^1.0.0
+  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true

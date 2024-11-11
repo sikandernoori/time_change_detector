@@ -1,11 +1,15 @@
-import 'dart:async';
-import 'package:flutter/services.dart';
+import 'time_change_detector_platform_interface.dart';
 
 class TimeChangeDetector {
-  static const EventChannel _eventChannel =
-      EventChannel('time_change_detector');
-
-  static Stream<bool> get init {
-    return _eventChannel.receiveBroadcastStream().cast();
+  Stream<bool> listener({
+    bool clockDidChange = true,
+    bool timeZoneDidChange = true,
+    bool calendarDayChanged = true,
+  }) {
+    return TimeChangeDetectorPlatform.instance.listener(
+      calendarDayChanged: calendarDayChanged,
+      clockDidChange: clockDidChange,
+      timeZoneDidChange: timeZoneDidChange,
+    );
   }
 }
