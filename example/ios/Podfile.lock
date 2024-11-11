@@ -1,28 +1,41 @@
 PODS:
-  - awesome_notifications (0.0.3):
+  - awesome_notifications (0.10.0):
     - Flutter
+    - IosAwnCore (~> 0.10.0)
   - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+  - IosAwnCore (0.10.0)
   - time_change_detector (0.0.1):
     - Flutter
 
 DEPENDENCIES:
   - awesome_notifications (from `.symlinks/plugins/awesome_notifications/ios`)
   - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
   - time_change_detector (from `.symlinks/plugins/time_change_detector/ios`)
+
+SPEC REPOS:
+  trunk:
+    - IosAwnCore
 
 EXTERNAL SOURCES:
   awesome_notifications:
     :path: ".symlinks/plugins/awesome_notifications/ios"
   Flutter:
     :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
   time_change_detector:
     :path: ".symlinks/plugins/time_change_detector/ios"
 
 SPEC CHECKSUMS:
-  awesome_notifications: 04530aafec8dac4635244ed4b4072f4aea6cc938
-  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
-  time_change_detector: 3995e4a74a7eceefe74d22f506b85f9f88cb0bfd
+  awesome_notifications: dd5518ff1c80be03d4f1c40f04da9d9cc2a37af5
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  integration_test: 252f60fa39af5e17c3aa9899d35d908a0721b573
+  IosAwnCore: 653786a911089012092ce831f2945cd339855a89
+  time_change_detector: ffd3657f24b08579c8ba5ce7f6b599ac5ba8dd73
 
-PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.15.2
